@@ -9,14 +9,14 @@
 */
 :root {
     /* 기본 테마: 카본 다크 (Carbon Dark) - 블랙 사이드바와 다크 스크롤 바디 */
-    --sidebar-bg: #090d16;
-    --main-bg: #0e1322;
-    --card-bg: #161c30;
-    --text-color: #f1f5f9;
-    --text-muted: #94a3b8;
-    --accent-color: #a855f7;   /* 보라색 강조 (Purple) */
-    --accent-hover: #c084fc;
-    --border-color: rgba(255, 255, 255, 0.04);
+    --sidebar-bg: rgba(255, 255, 255, 0.8);
+    --main-bg: #f3f8ff;
+    --card-bg: rgba(255, 255, 255, 0.91);
+    --text-color: #10213b;
+    --text-muted: #64748b;
+    --accent-color: #0077ff;
+    --accent-hover: #00b8d9;
+    --border-color: rgba(0, 119, 255, 0.18);
 }
 
 /* 💡 [포레스트 다크 스킨으로 변환하기]
@@ -72,7 +72,7 @@ body {
     font-size: 1.6rem;
     font-weight: 800;
     margin-bottom: 10px;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 .profile p {
@@ -117,7 +117,7 @@ body {
 .card h3 {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 .card p {
