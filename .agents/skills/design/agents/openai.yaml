@@ -1,0 +1,4 @@
+interface:
+  display_name: "Portfolio Design"
+  short_description: "Apply approved portfolio design changes"
+  default_prompt: "Use $design to propose and apply an approved portfolio design update."
