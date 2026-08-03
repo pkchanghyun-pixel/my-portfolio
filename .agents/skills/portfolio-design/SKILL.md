@@ -1,5 +1,5 @@
 ---
-name: design
+name: portfolio-design
 description: Propose, preview, and implement approved visual design changes for this portfolio's HTML and CSS. Use for requests involving layout, color, spacing, typography, cards, responsive behavior, or other website presentation changes.
 ---
 
