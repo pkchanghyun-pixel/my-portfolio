@@ -160,11 +160,15 @@ body {
     letter-spacing: 0.08em;
 }
 
-.card:nth-child(4)::before {
-    content: "CAMERA · VISION · AI";
+.card:nth-child(3)::before {
+    content: "HTML · CSS · JS · API";
 }
 
 .card:nth-child(5)::before {
+    content: "CAMERA · VISION · AI";
+}
+
+.card:nth-child(6)::before {
     content: "VOICE · AUDIO · AI";
     color: var(--accent-hover);
 }
@@ -183,7 +187,7 @@ body {
 }
 
 /* 4. 카드 내부 링크 버튼 */
-.card a, .btn {
+.card a, .card-link, .btn {
     align-self: flex-start;
     color: var(--accent-color);
     text-decoration: none;
@@ -197,6 +201,13 @@ body {
 .card a:hover, .btn:hover {
     color: var(--accent-hover);
     transform: translateX(4px);
+}
+
+.card-link.is-disabled {
+    color: var(--text-muted);
+    cursor: not-allowed;
+    opacity: 0.58;
+    transform: none;
 }
 
 @media screen and (max-width: 900px) {

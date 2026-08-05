@@ -61,15 +61,17 @@ Use the approved Project Gallery layout unless the user selects another option:
 - Preserve every source image's intrinsic aspect ratio. Use `object-fit: cover` for the approved robot tile so it fills the shared media slot without stretching; cropping is allowed for this asset.
 - For other images, use `contain` by default and switch to `cover` only after explicit approval.
 - Keep the action link near the bottom, but reduce card height before increasing the blank gap above it.
-- On desktop, preserve the balanced `3 + 2` arrangement with the final two cards centered.
+- On desktop, use complete three-card rows and center only an incomplete final row.
 
 ## CSS Implementation Defaults
 
 - Implement approved changes in existing HTML and CSS files before adding markup or assets.
 - Use a `.profile::before` badge when the existing header contains only a heading and subtitle.
 - Use `:not(:has(img)):not(:has(iframe))::before` for consistent media placeholders without adding HTML.
+- Use a topic-specific placeholder such as `HTML · CSS · JS · API` until the user supplies the final image, then replace the placeholder without changing card order or copy.
 - Set the approved robot image and embedded video to the shared `170px` media height; use `object-fit: cover` so the robot tile has no letterbox gap.
 - Use `margin-top: auto` on card actions so links align without fixed text heights.
+- Render unavailable destinations as a non-clickable `.card-link.is-disabled` element with `aria-disabled="true"`; never use a fake URL.
 
 ## Change Boundaries
 
