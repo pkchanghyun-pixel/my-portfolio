@@ -67,11 +67,11 @@ Use the approved Project Gallery layout unless the user selects another option:
 
 - Split every card heading into a small `.day-label` and a separate `.project-title` on the next line.
 - For numbered lessons, show Korean labels such as `1일차`; use concise category labels such as `VISION AI` when no day number exists.
-- Give every desktop and tablet heading the same minimum block height so each description begins on a shared baseline.
-- Allow the heading to grow when content needs more lines; never clip or truncate educational project names.
-- Style the label as a restrained Soft Sky pill and the project name as clean Deep Navy text at `800` weight.
+- Give every desktop and tablet heading the same fixed block height so one-line and two-line titles place descriptions on the same baseline.
+- Size the shared block for the longest two-line title. If a title needs more than two lines, increase every card's shared height rather than clipping it.
+- Style the label as a prominent Soft Sky pill at `0.9rem`, about `34px` high, and the project name as clean Deep Navy text at `800` weight.
 - Avoid title background boxes, side bars, gradients, and oversized decorative elements.
-- Remove the minimum title height in the single-column mobile layout because cross-card alignment is no longer needed.
+- Remove the fixed title height and flex basis in the single-column mobile layout because cross-card alignment is no longer needed.
 
 ## CSS Implementation Defaults
 
