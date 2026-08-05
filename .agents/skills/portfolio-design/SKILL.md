@@ -28,6 +28,7 @@ Preserve the portfolio's content while making deliberate, approval-based visual 
 - Primary accent: Cobalt Blue `#315efb`.
 - Secondary accent: Teal `#0ea5a4`.
 - Media background: Soft Sky `#eef3f9`.
+- Card title background: Frost `#f8faff`.
 - Border: Mist Blue `#d8e2f0`.
 - Use subtle shadows and thin borders; avoid dark page backgrounds, decorative gradients, and excessive neon.
 
@@ -62,6 +63,14 @@ Use the approved Project Gallery layout unless the user selects another option:
 - For other images, use `contain` by default and switch to `cover` only after explicit approval.
 - Keep the action link near the bottom, but reduce card height before increasing the blank gap above it.
 - On desktop, use complete three-card rows and center only an incomplete final row.
+
+## Card Title Alignment
+
+- Give every desktop and tablet card title the same two-line minimum block height so each description begins on a shared baseline.
+- Allow the title block to grow when content needs more than two lines; never clip or truncate educational project names.
+- Increase title visibility with Deep Navy text, `800` weight, a solid Cobalt left border, and a quiet solid background.
+- Keep title padding compact and consistent. Do not use a decorative gradient inside card titles.
+- Remove the minimum title height in the single-column mobile layout because cross-card alignment is no longer needed.
 
 ## CSS Implementation Defaults
 
