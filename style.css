@@ -9,14 +9,15 @@
 */
 :root {
     /* 기본 테마: 카본 다크 (Carbon Dark) - 블랙 사이드바와 다크 스크롤 바디 */
-    --sidebar-bg: rgba(255, 255, 255, 0.8);
-    --main-bg: #f3f8ff;
-    --card-bg: rgba(255, 255, 255, 0.91);
-    --text-color: #10213b;
+    --sidebar-bg: #ffffff;
+    --main-bg: #f5f7fb;
+    --card-bg: #ffffff;
+    --text-color: #17324d;
     --text-muted: #64748b;
-    --accent-color: #0077ff;
-    --accent-hover: #00b8d9;
-    --border-color: rgba(0, 119, 255, 0.18);
+    --accent-color: #315efb;
+    --accent-hover: #0ea5a4;
+    --media-bg: #eef3f9;
+    --border-color: #d8e2f0;
 }
 
 /* 💡 [포레스트 다크 스킨으로 변환하기]
@@ -41,13 +42,10 @@
 body {
     font-family: system-ui, -apple-system, sans-serif;
     background-color: var(--main-bg);
-    background-image:
-        radial-gradient(circle at 15% 10%, rgba(0, 184, 217, 0.12), transparent 28%),
-        radial-gradient(circle at 85% 0%, rgba(0, 119, 255, 0.1), transparent 32%);
     color: var(--text-color);
     line-height: 1.6;
     min-height: 100vh;
-    padding: 60px 20px;
+    padding: 52px 20px 60px;
 }
 
 .container {
@@ -58,40 +56,37 @@ body {
 /* 1. 고정 프로필 사이드바 (.profile) */
 .profile {
     text-align: center;
-    margin-bottom: 42px;
-    padding: 44px 24px;
+    margin-bottom: 40px;
+    padding: 38px 24px;
     background-color: var(--sidebar-bg);
     border: 1px solid var(--border-color);
-    border-radius: 24px;
-    box-shadow: 0 18px 45px rgba(16, 33, 59, 0.08);
+    border-radius: 28px;
+    box-shadow: 0 16px 38px rgba(23, 50, 77, 0.07);
     position: relative;
     overflow: hidden;
 }
 
-.profile::before,
-.profile::after {
-    content: "";
-    position: absolute;
-    width: 140px;
-    height: 1px;
-    top: 50%;
-    background: linear-gradient(90deg, transparent, var(--accent-color));
-}
-
 .profile::before {
-    left: 5%;
-}
-
-.profile::after {
-    right: 5%;
-    transform: rotate(180deg);
+    content: "PHYSICAL AI · EDUCATION PORTFOLIO";
+    display: inline-flex;
+    margin-bottom: 14px;
+    padding: 6px 13px;
+    color: var(--accent-color);
+    background: var(--media-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.08em;
 }
 
 .profile h1 {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 4vw, 2.65rem);
     font-weight: 800;
     margin-bottom: 8px;
-    letter-spacing: -0.5px;
+    line-height: 1.25;
+    letter-spacing: -0.04em;
     color: var(--text-color);
 }
 
@@ -106,20 +101,20 @@ body {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 24px;
+    gap: 20px;
 }
 
 /* 3. 개별 카드 (.card) */
 .card {
     background-color: var(--card-bg);
-    border-radius: 16px;
-    padding: 24px;
+    border-radius: 18px;
+    padding: 20px 20px 18px;
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     transition: transform 0.2s ease, border-color 0.2s ease;
-    box-shadow: 0 12px 30px rgba(16, 33, 59, 0.07);
+    box-shadow: 0 10px 26px rgba(23, 50, 77, 0.06);
     grid-column: span 2;
 }
 
@@ -128,22 +123,55 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     border-color: var(--accent-color);
-    box-shadow: 0 18px 36px rgba(0, 119, 255, 0.15);
+    box-shadow: 0 16px 32px rgba(49, 94, 251, 0.13);
 }
 
 .card img, .card iframe {
     width: 100%;
-    height: 170px;
-    border-radius: 8px;
-    object-fit: cover;
+    height: 128px;
+    border-radius: 12px;
+    background-color: var(--media-bg);
     border: none;
+}
+
+.card img {
+    object-fit: contain;
+}
+
+.card iframe {
+    object-fit: cover;
+}
+
+.card:not(:has(img)):not(:has(iframe))::before {
+    content: "PROJECT · LEARNING · AI";
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 128px;
+    flex: 0 0 128px;
+    border-radius: 12px;
+    color: var(--accent-color);
+    background: var(--media-bg);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.card:nth-child(4)::before {
+    content: "CAMERA · VISION · AI";
+}
+
+.card:nth-child(5)::before {
+    content: "VOICE · AUDIO · AI";
+    color: var(--accent-hover);
 }
 
 .card h3 {
     font-size: 1.2rem;
     font-weight: 700;
+    line-height: 1.4;
     color: var(--text-color);
 }
 
@@ -161,7 +189,8 @@ body {
     font-weight: 700;
     font-size: 0.85rem;
     transition: color 0.2s ease, transform 0.2s ease;
-    margin-top: 10px;
+    margin-top: auto;
+    padding-top: 8px;
 }
 
 .card a:hover, .btn:hover {
@@ -179,10 +208,6 @@ body {
         grid-column: auto;
     }
 
-    .profile::before,
-    .profile::after {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 620px) {
