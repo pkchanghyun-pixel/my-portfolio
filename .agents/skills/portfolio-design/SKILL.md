@@ -67,13 +67,14 @@ Use the approved Project Gallery layout unless the user selects another option:
 
 - Split every card heading into a small `.day-label` and a separate `.project-title` on the next line.
 - For numbered lessons, show Korean labels such as `1일차`; use concise category labels such as `VISION AI` when no day number exists.
-- Give every desktop and tablet heading the same fixed block height so one-line and two-line titles place descriptions on the same baseline.
-- Size the shared block for the longest two-line title. If a title needs more than two lines, increase every card's shared height rather than clipping it.
+- Keep every project name on one line so all descriptions begin on the same baseline.
+- Use a shared fixed heading block on desktop and tablet, sized for the metadata row plus one project-title line.
 - Use the professional Editorial Course Index treatment: a full-width metadata row, small cobalt square, and thin Mist Blue divider.
-- Keep the metadata label at `0.9rem` and the project name around `1.3rem` in Deep Navy at `800` weight.
+- Keep the metadata label at `0.9rem`; use a compact `0.82rem` Deep Navy project name at `800` weight with no wrapping.
 - On card hover, change only the metadata square to Teal with a restrained scale effect.
 - Avoid pills, title background boxes, side bars, gradients, and oversized decorative elements.
 - Remove the fixed title height and flex basis in the single-column mobile layout because cross-card alignment is no longer needed.
+- Reduce the project name to about `0.76rem` on narrow phones so the longest approved title remains on one line.
 
 ## CSS Implementation Defaults
 

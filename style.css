@@ -174,8 +174,8 @@ body {
 }
 
 .card h3 {
-    height: 7.25rem;
-    flex: 0 0 7.25rem;
+    height: 6rem;
+    flex: 0 0 6rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -209,11 +209,13 @@ body {
 }
 
 .project-title {
+    max-width: 100%;
     color: var(--text-color);
-    font-size: 1.3rem;
+    font-size: 0.82rem;
     font-weight: 800;
-    line-height: 1.32;
-    letter-spacing: -0.03em;
+    line-height: 1.35;
+    letter-spacing: -0.035em;
+    white-space: nowrap;
 }
 
 .card:hover .day-label::before {
@@ -284,5 +286,9 @@ body {
     .card h3 {
         height: auto;
         flex-basis: auto;
+    }
+
+    .project-title {
+        font-size: 0.76rem;
     }
 }
