@@ -28,7 +28,6 @@ Preserve the portfolio's content while making deliberate, approval-based visual 
 - Primary accent: Cobalt Blue `#315efb`.
 - Secondary accent: Teal `#0ea5a4`.
 - Media background: Soft Sky `#eef3f9`.
-- Card title background: Frost `#f8faff`.
 - Border: Mist Blue `#d8e2f0`.
 - Use subtle shadows and thin borders; avoid dark page backgrounds, decorative gradients, and excessive neon.
 
@@ -66,10 +65,12 @@ Use the approved Project Gallery layout unless the user selects another option:
 
 ## Card Title Alignment
 
-- Give every desktop and tablet card title the same two-line minimum block height so each description begins on a shared baseline.
-- Allow the title block to grow when content needs more than two lines; never clip or truncate educational project names.
-- Increase title visibility with Deep Navy text, `800` weight, a solid Cobalt left border, and a quiet solid background.
-- Keep title padding compact and consistent. Do not use a decorative gradient inside card titles.
+- Split every card heading into a small `.day-label` and a separate `.project-title` on the next line.
+- For numbered lessons, show Korean labels such as `1일차`; use concise category labels such as `VISION AI` when no day number exists.
+- Give every desktop and tablet heading the same minimum block height so each description begins on a shared baseline.
+- Allow the heading to grow when content needs more lines; never clip or truncate educational project names.
+- Style the label as a restrained Soft Sky pill and the project name as clean Deep Navy text at `800` weight.
+- Avoid title background boxes, side bars, gradients, and oversized decorative elements.
 - Remove the minimum title height in the single-column mobile layout because cross-card alignment is no longer needed.
 
 ## CSS Implementation Defaults

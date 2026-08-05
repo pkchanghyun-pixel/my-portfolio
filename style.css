@@ -17,7 +17,6 @@
     --accent-color: #315efb;
     --accent-hover: #0ea5a4;
     --media-bg: #eef3f9;
-    --title-bg: #f8faff;
     --border-color: #d8e2f0;
 }
 
@@ -175,16 +174,34 @@ body {
 }
 
 .card h3 {
-    min-height: 4.15rem;
-    padding: 7px 10px 7px 12px;
-    border-left: 4px solid var(--accent-color);
-    border-radius: 0 10px 10px 0;
-    background-color: var(--title-bg);
+    min-height: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+.day-label {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    padding: 4px 9px;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    color: var(--accent-color);
+    background-color: var(--media-bg);
+    font-size: 0.7rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.06em;
+}
+
+.project-title {
+    color: var(--text-color);
     font-size: 1.25rem;
     font-weight: 800;
     line-height: 1.35;
-    letter-spacing: -0.02em;
-    color: var(--text-color);
+    letter-spacing: -0.025em;
 }
 
 .card p {
